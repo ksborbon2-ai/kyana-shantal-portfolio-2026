@@ -217,12 +217,16 @@ a {
   position: relative;
   min-height: 34rem;
   overflow: hidden;
-  background:
-    linear-gradient(0deg, rgba(54, 0, 0, 0.8), rgba(54, 0, 0, 0.8)),
-    radial-gradient(circle at center, rgba(255, 228, 236, 0.72), transparent 28%),
-    linear-gradient(135deg, #e5dfd7 0%, #efc6d3 42%, #dc7f9e 100%);
 }
-
+.feature-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+	object-position: center top;
+  z-index: 0;
+}
 .feature-poster {
   position: absolute;
   inset: 0;
@@ -236,6 +240,7 @@ a {
   justify-self: end;
   font-size: clamp(1rem, 1.8vw, 1.6rem);
   letter-spacing: -0.03em;
+  text-align: right;
 }
 
 .feature-poster strong {

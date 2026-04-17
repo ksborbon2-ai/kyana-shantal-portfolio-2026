@@ -35,10 +35,10 @@ body {
 }
 .page-gif {
   position: absolute;
-  top: 50rem;
+  top: 70rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 1920px;
+  width: 1480px;
   height: auto;
   pointer-events: none;
   z-index: 2;

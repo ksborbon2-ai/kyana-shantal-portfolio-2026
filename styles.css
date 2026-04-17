@@ -29,16 +29,14 @@ body {
   min-height: 100vh;
   color: var(--ink);
   font-family: var(--display);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.22)),
-    linear-gradient(180deg, #dce1e7 0%, #d2d8df 100%);
+  background: #f7f4ef;
 }
 .page-gif {
   position: absolute;
-  top: 70rem;
+  top: 15rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 1480px;
+  width: 1980px;
   height: auto;
   pointer-events: none;
   z-index: 2;
@@ -48,11 +46,11 @@ body {
 .page-shell {
   position: relative;
   z-index: 1;
-  width: min(calc(100% - 2rem), var(--max-width));
-  margin: 1.5rem auto;
-  background: rgba(247, 244, 239, 0.82);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(6px);
+  width: 100%;
+  margin: 0;
+  background: #f7f4ef;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 body::before {
@@ -73,8 +71,8 @@ a {
 .page-shell {
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 1.5rem auto;
-  background: var(--page);
-  box-shadow: var(--shadow);
+  background: var(--page),radial-gradient(circle at 15% 10%, rgba(255, 255, 255, 0.55), transparent 20%),
+    radial-gradient(circle at 88% 32%, rgba(240, 139, 168, 0.1), transparent 18%);
 }
 
 .site-header {
@@ -84,8 +82,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2.2rem 0;
-  background: linear-gradient(180deg, rgba(247, 244, 239, 0.9), rgba(247, 244, 239, 0.72));
+  width: 100%;
+  padding: 2rem 0 0;
+  background: transparent;
   backdrop-filter: blur(10px);
 }
 
@@ -112,7 +111,7 @@ a {
 }
 
 .layout {
-  padding: 0 2.2rem 3rem;
+  padding: 0 1.2rem 3rem;
 }
 
 .section {
@@ -172,7 +171,7 @@ a {
   color: var(--ink);
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  max-width: 17ch;
+  max-width: 30ch;
 }
 
 .social-row {

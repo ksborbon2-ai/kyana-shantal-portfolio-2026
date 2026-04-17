@@ -326,17 +326,10 @@ a {
   object-fit: cover;
   object-position: top center;
 }
-}
 
 .resume-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(17, 23, 34, 0.08);
-}
-
-.resume-image {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .resume-card-meta {

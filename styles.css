@@ -227,7 +227,7 @@ a {
   z-index: 0;
 }
 .feature-poster {
-  position: absolute;
+  position: relative;
   inset: 0;
   padding: 1.8rem;
   display: grid;
@@ -259,6 +259,93 @@ a {
   color: #f7ec91;
   text-shadow: 2px 2px 0 #111722;
 }
+
+.resume-section {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 2rem;
+  align-items: start;
+  border-top: 1px solid var(--line);
+  background: radial-gradient(circle at 15% 40%, rgba(198, 255, 0, 0.1), transparent 22%);
+}
+
+.resume-copy {
+  display: grid;
+  gap: 1rem;
+  max-width: 30rem;
+}
+
+.resume-copy h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.resume-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.4rem;
+  padding-top: 0.6rem;
+}
+
+.resume-actions a {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.2rem;
+}
+
+.resume-card {
+  position: relative;
+  display: block;
+  background: #f4efe7;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition: transform 280ms ease, box-shadow 280ms ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(17, 23, 34, 0.08);
+}
+
+.resume-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.resume-card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-top: 1px solid var(--line);
+  background: #fbfaf7;
+  box-shadow: 0 18px 40px rgba(17, 23, 34, 0.08);
+}
+
+.resume-tag,
+.resume-year {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+@media (max-width: 900px) {
+  .resume-section {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .work-header {
   display: flex;
@@ -420,8 +507,9 @@ a {
 .contact-link {
   display: inline-block;
   margin-top: 1rem;
-  font-size: clamp(2.4rem, 6vw, 5rem);
+  font-size: clamp(2.4rem, 5vw, 4.75rem);
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .reveal {
@@ -525,6 +613,24 @@ a {
   .project-visual {
     min-height: 18rem;
   }
+
+  @media (max-width: 720px) {
+  .feature-poster {
+    inset: 0;
+    padding: 0.75rem;
+  }
+
+  .poster-meta {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    max-width: 45%;
+    text-align: right;
+    z-index: 3;
+  }
+}
 
   .contact-link {
     word-break: break-word;

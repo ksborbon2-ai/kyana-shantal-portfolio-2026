@@ -33,7 +33,6 @@ body {
   position: relative;
   cursor: url("./cursor.cur"), auto;
 }
-}
 
 body::before {
   content: "";
@@ -433,17 +432,27 @@ a {
   min-height: 16rem;
 }
 
-.pink-card {
-  margin-top: 43rem;
-  margin-bottom: 13rem;
-  margin-left: -10rem;
-  max-width: 150%;
-  min-height: 50%
+.pink-card .project-visual {
+  min-height: 26rem;
+  position: relative;
 }
 
-.project-wide {
-  grid-column: 1 / span 2;
-  max-width: 68%;
+@media (min-width: 1025px) {
+  .pink-card {
+    margin-top: 43rem;
+    margin-bottom: 13rem;
+    margin-left: -10rem;
+    max-width: 150%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pink-card {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    max-width: 100%;
+  }
 }
 
 .project-wide .project-visual {

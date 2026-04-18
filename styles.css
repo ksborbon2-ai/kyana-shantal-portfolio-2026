@@ -50,6 +50,7 @@ a {
 
 .page-shell {
   position: relative;
+  z-index: 1;
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 1.5rem auto;
   background: var(--page);
@@ -601,8 +602,8 @@ a {
   .hero-summary {
     padding-top: 0;
   }
-	
-	 #jump-gif.Character-Jump-project-gif {
+
+  #jump-gif.Character-Jump-project-gif {
     position: absolute;
     top: 123rem;
     right: -23%;
@@ -610,7 +611,7 @@ a {
     width: 530px;
     max-width: none;
     height: auto;
-    transform: scaleX(-1);;
+    transform: scaleX(-1);
     opacity: 0.7;
     pointer-events: none;
     z-index: 6;
@@ -640,8 +641,8 @@ a {
     align-items: flex-start;
     gap: 0.8rem;
   }
-	
-	.hero-intro h1 {
+
+  .hero-intro h1 {
     font-size: clamp(2.8rem, 13vw, 4.8rem);
     line-height: 0.92;
     letter-spacing: -0.04em;
@@ -679,15 +680,14 @@ a {
   }
 
   .contact-link {
-  display: inline-block;
-  max-width: 100%;
-  font-size: clamp(0.9rem, 4.8vw, 1.35rem);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: clip;
-  line-height: 1;
-}
-
+    display: inline-block;
+    max-width: 100%;
+    font-size: clamp(0.82rem, 4.1vw, 1.05rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    line-height: 1;
+  }
 
   .contact-banner {
     border-bottom: none;
@@ -700,24 +700,28 @@ a {
     display: none;
   }
 
-  #jump-gif.Character-Jump-project-gif {
-    position: absolute;
-    top: 116rem;
-    right: -45%;
-    left: auto;
-    width: 440px;
-    max-width: none;
-    height: auto;
-    transform: scaleX(-1);;
-    opacity: 0.7;
-    pointer-events: none;
-    z-index: 6;
-  }
-
   .resume-section {
     position: relative;
     z-index: 5;
     display: block;
+  }
+
+  #jump-gif.Character-Jump-project-gif {
+    display: none;
+  }
+
+  .resume-section::after {
+    content: "";
+    position: absolute;
+    top: -1.5rem;
+    right: -12vw;
+    width: clamp(180px, 52vw, 260px);
+    height: clamp(180px, 52vw, 260px);
+    background: url("Character-Jump-project.gif") center / contain no-repeat;
+    transform: scaleX(-1);
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 6;
   }
 
   .resume-card {

@@ -48,3 +48,21 @@ const onScroll = () => {
 setSectionProgress();
 window.addEventListener("scroll", onScroll, { passive: true });
 window.addEventListener("resize", setSectionProgress);
+
+const gifElement = document.getElementById('jump-gif');
+
+const gifObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && gifElement) {
+      const baseSrc = gifElement.src.split('?')[0];
+      gifElement.src = baseSrc + '?t=' + new Date().getTime();
+    }
+  });
+}, { 
+  threshold: 0.01,
+  rootMargin: "10% 0px 10% 0px" 
+});
+
+if (gifElement) {
+  gifObserver.observe(gifElement);
+}

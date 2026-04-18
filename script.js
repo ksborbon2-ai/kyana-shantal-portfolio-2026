@@ -66,3 +66,26 @@ const gifObserver = new IntersectionObserver((entries) => {
 if (gifElement) {
   gifObserver.observe(gifElement);
 }
+
+window.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".project-video").forEach(function (video) {
+    var wrapper = video.closest(".project-animation");
+    if (!wrapper) return;
+
+    function playVideo() {
+      video.currentTime = 0;
+      video.play();
+    }
+
+    function stopVideo() {
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    wrapper.addEventListener("mouseenter", playVideo);
+    wrapper.addEventListener("mouseleave", stopVideo);
+
+    wrapper.addEventListener("touchstart", playVideo, { passive: true });
+    wrapper.addEventListener("touchend", stopVideo);
+  });
+});

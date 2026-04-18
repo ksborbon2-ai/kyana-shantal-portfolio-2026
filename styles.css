@@ -31,6 +31,8 @@ body {
   font-family: var(--display);
   background: #f7f4ef;
   position: relative;
+  cursor: url("./cursor.cur"), auto;
+}
 }
 
 body::before {
@@ -150,7 +152,7 @@ a {
 
 .hero-intro h1 span {
   display: block;
-  color: rgba(17, 23, 34, 0.55);
+  color: rgba(17, 23, 34, 0.45);
 }
 
 .hero-summary {
@@ -385,7 +387,7 @@ a {
 
 .work-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 2fr 1.1fr;
   gap: 2rem 2.25rem;
   align-items: start;
 }
@@ -413,40 +415,39 @@ a {
   position: relative;
   min-height: 19rem;
   overflow: hidden;
-  background-size: cover;
   background-position: center;
 }
 
+.project-animation {
+  overflow: hidden;
+}
+
+.project-video {
+  display: block;
+  width: 58rem;
+  height: 100%;
+  object-fit: cover;
+}
+
 .project-feature .project-visual {
-  min-height: 36rem;
+  min-height: 16rem;
+}
+
+.pink-card {
+  margin-top: 43rem;
+  margin-bottom: 13rem;
+  margin-left: -10rem;
+  max-width: 150%;
+  min-height: 50%
+}
+
+.project-wide {
+  grid-column: 1 / span 2;
+  max-width: 68%;
 }
 
 .project-wide .project-visual {
   min-height: 28rem;
-}
-
-.visual-soft {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.12)),
-    linear-gradient(135deg, #f3f5f8 0%, #e9edf2 28%, #ced6df 100%);
-}
-
-.visual-soft::before,
-.visual-dark::before,
-.visual-night::before {
-  content: "";
-  position: absolute;
-  inset: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-}
-
-.visual-soft::after {
-  content: "";
-  position: absolute;
-  inset: auto 8% 12% 8%;
-  height: 42%;
-  background: linear-gradient(180deg, #ffffff 0%, #eef2f7 100%);
-  box-shadow: 0 24px 60px rgba(42, 55, 72, 0.12);
 }
 
 .visual-editorial {

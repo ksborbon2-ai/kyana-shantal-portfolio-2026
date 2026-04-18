@@ -709,10 +709,10 @@ a {
   #jump-gif.Character-Jump-project-gif {
     display: block;
     position: absolute;
-    top: 113rem;
-    right: -10vw;
+    top: 117rem;
+    right: 5vw;
     left: auto;
-    width: clamp(120px, 28vw, 170px);
+    width: clamp(320px, 28vw, 170px);
     max-width: none;
     height: auto;
     transform: scaleX(-1);

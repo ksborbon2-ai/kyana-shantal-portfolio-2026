@@ -343,7 +343,7 @@ a {
 .Character-Jump-project-gif {
    position: absolute;
   top: 155rem;
-  right: -1%;
+  right: 5%;
   transform: translateX(-50%);
   width: 1980px;
   max-width: 90%;
@@ -667,30 +667,103 @@ a {
   }
 
   .contact-link {
-    word-break: break-word;
+    font-size: clamp(1.5rem, 4.2vw, 2.2rem); 
+    white-space: nowrap;
+    display: inline-block;
+    border-bottom: 1px solid currentColor;
   }
 	
-.Character-Jump-project-gif {
+   .contact-banner {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  footer, 
+  .site-footer,
+  .page-shell::after {
+    display: none;
+  }
+
+  /* Keep these INSIDE the 720px media query */
+  .Character-Jump-project-gif {
     display: block !important;
     visibility: visible !important;
-    top: 110rem; 
+    top: 111rem;
     left: 50%;
     transform: translateX(-50%);
     width: 1200px;
-    max-width: 150%;
+    max-width: 118%;
     z-index: -1; 
     opacity: 0.5;
   }
 
   .resume-section {
     position: relative;
-    z-index: 5; 
+    z-index: 5;
+    display: block; 
   }
 
   .resume-card {
-    z-index: 10; 
+    display: flex !important;
+    flex-direction: column; /* Stacks image and meta bar */
+    position: relative;
+    height: 30rem; /* Increased slightly to fit the meta bar */
+    width: 100%;
+    overflow: hidden;
+    z-index: 20; 
+    margin-top: 2rem;
+    transform: rotate(0deg); /* Straighten it for easier mobile reading */
+  }
+
+  .resume-image {
+    display: block !important;
+    width: 100%;
+    flex: 1; /* Tells the image to take up all available space MINUS the meta bar */
+    object-fit: cover;
+    object-position: top center;
+    z-index: 21;
+  }
+
+  .resume-card-meta {
+    position: relative;
+    z-index: 22;
+    background: #fbfaf7;
+    padding: 1rem;
+    border-top: 1px solid var(--line);
+    display: flex !important; /* Ensures it stays visible */
+    justify-content: space-between;
+  }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal, 
+  .reveal.is-visible,
+  .hero-intro,
+  .hero-summary,
+  .feature-copy,
+  .feature-art,
+  .work-grid .project,
+  .about-copy,
+  .about-notes,
+  .contact-banner {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal, .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+} /* This single bracket closes the @media (max-width: 720px) query */
 
 @media (prefers-reduced-motion: reduce) {
   html {

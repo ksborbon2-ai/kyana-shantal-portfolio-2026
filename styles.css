@@ -591,6 +591,7 @@ a {
   );
 }
 
+
 @media (max-width: 1024px) {
   .hero,
   .feature-editorial,
@@ -670,10 +671,13 @@ a {
   }
 	
 .Character-Jump-project-gif {
-    display: block;
-    top: 240rem; 
+    display: block !important;
+    visibility: visible !important;
+    top: 110rem; 
+    left: 50%;
+    transform: translateX(-50%);
     width: 1200px;
-    max-width: 180%;
+    max-width: 150%;
     z-index: -1; 
     opacity: 0.5;
   }

@@ -419,15 +419,34 @@ a {
 
 .project-animation {
   position: relative;
-  min-height: 18rem;
+  overflow: hidden;
+  min-height: 34rem;
 }
 
 .project-video {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+@media (max-width: 720px) {
+  .project-animation {
+    min-height: 18rem;
+  }
+
+  .project-video {
+    display: none;
+  }
+
+  .project-animation::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("./MSFT_Logo_End_Card_Black_BG_4K_preview.jpg") center / cover no-repeat;
+  }
 }
 
 .project-feature .project-visual {
@@ -440,7 +459,7 @@ a {
 
 @media (min-width: 1025px) {
   .pink-card {
-    margin-top: 38rem;
+    margin-top: 43rem;
     margin-bottom: 3rem;
     margin-left: -10rem;
     max-width: 150%;

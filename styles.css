@@ -418,14 +418,16 @@ a {
 }
 
 .project-animation {
-  overflow: hidden;
+  position: relative;
+  min-height: 18rem;
 }
 
 .project-video {
   display: block;
-  width: 58rem;
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .project-feature .project-visual {
@@ -434,13 +436,12 @@ a {
 
 .pink-card .project-visual {
   min-height: 26rem;
-  position: relative;
 }
 
 @media (min-width: 1025px) {
   .pink-card {
-    margin-top: 43rem;
-    margin-bottom: 13rem;
+    margin-top: 38rem;
+    margin-bottom: 3rem;
     margin-left: -10rem;
     max-width: 150%;
   }

@@ -89,3 +89,20 @@ window.addEventListener("DOMContentLoaded", function () {
     wrapper.addEventListener("touchend", stopVideo);
   });
 });
+
+document.querySelectorAll(".project-video").forEach((video) => {
+  const card = video.closest(".project-animation");
+
+  if (!card) return;
+
+  card.addEventListener("mouseenter", () => {
+    video.play();
+  });
+
+  card.addEventListener("mouseleave", () => {
+    video.pause();
+    video.currentTime = 0;
+    video.load();
+  });
+});
+

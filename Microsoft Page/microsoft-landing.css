@@ -564,7 +564,7 @@ a {
   .project-notes {
     gap: 1rem;
     margin: 4rem 0 6rem;
-    padding: 2rem 0;
+	padding: var(--section-space) 0;
   }
 
   .project-notes-copy p {

@@ -543,7 +543,7 @@ a {
   .focus-copy {
     font-size: 1.05rem;
     line-height: 1.15;
-    text-align: justify;
+    text-align: left;
     text-align-last: auto;
     overflow-wrap: anywhere;
   }
@@ -563,7 +563,7 @@ a {
   .project-notes {
     gap: 1rem;
     margin: 4rem 0 6rem;
-	padding: var(--section-space) 0;
+    padding: var(--section-space) 0;
   }
 
   .project-notes-copy p {

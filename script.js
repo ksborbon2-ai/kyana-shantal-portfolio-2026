@@ -105,4 +105,3 @@ document.querySelectorAll(".project-video").forEach((video) => {
     video.load();
   });
 });
-

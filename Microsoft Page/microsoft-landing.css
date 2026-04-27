@@ -6,7 +6,7 @@
   --muted: #4d596b;
   --line: rgba(18, 26, 41, 0.12);
   --accent: #c4f400;
-  --max-width: 1460px;
+  --max-width: 1480px;
   --section-space: clamp(3.5rem, 8vw, 7rem);
   --display: "Helvetica Neue", Arial, sans-serif;
 }
@@ -62,32 +62,38 @@ a {
   z-index: 30;
 }
 
-.site-header,
 .page-shell {
   position: relative;
   z-index: 1;
-  width: min(calc(100% - 3rem), var(--max-width));
-  margin: 0 auto;
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 1.5rem auto;
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 0 0;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.72rem;
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 1.5rem auto 0;
+  padding: 2rem 0 0;
+  background: transparent;
+  backdrop-filter: blur(10px);
 }
 
 .brand,
 .site-nav a {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
   font-weight: 700;
 }
 
 .site-nav {
   display: flex;
-  gap: 1.9rem;
+  gap: 1.3rem;
 }
 
 .motion-section {
@@ -114,6 +120,21 @@ a {
   gap: 0;
   padding: 4.25rem 0 7rem;
   align-items: start;
+}
+
+.hero-grid::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 23, 34, 0),
+    rgba(17, 23, 34, 0.12),
+    rgba(17, 23, 34, 0)
+  );
 }
 
 .eyebrow,
@@ -495,8 +516,8 @@ a {
   }
 
   .hero-left h1 {
-    font-size: clamp(3rem, 17vw, 5.3rem);
-    max-width: none;
+    font-size: clamp(3rem, 10vw, 5.3rem);
+    max-width: 100%;
   }
 
   .hero-meta {

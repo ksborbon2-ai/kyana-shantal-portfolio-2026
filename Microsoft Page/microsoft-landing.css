@@ -493,45 +493,61 @@ a {
 }
 
 @media (max-width: 760px) {
-  .site-header,
-  .page-shell {
-    width: calc(100% - 1.25rem);
+  .hero-left,
+  .hero-right,
+  .section-title-row > * {
+    min-width: 0;
   }
 
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.85rem;
-    padding-top: 2rem;
-  }
-
-  .site-nav {
-    gap: 1.2rem;
-    flex-wrap: wrap;
-  }
-
-  .hero-grid {
-    gap: 2rem;
-    padding-top: 2.25rem;
+  .hero-left h1,
+  .section-title-row h2 {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .hero-left h1 {
-    font-size: clamp(3rem, 10vw, 5.3rem);
-    max-width: 100%;
+    font-size: clamp(2.2rem, 11vw, 3.4rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
   }
 
-  .hero-meta {
+  .section-title-row {
+    gap: 1rem;
+    padding: 2.5rem 0;
+  }
+
+  .section-title-row h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 0.95;
+  }
+
+  .hero-grid {
     grid-template-columns: 1fr;
-    margin-top: 2.5rem;
+    gap: 1.5rem;
+    overflow: hidden;
+  }
+
+  .hero-right {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-top: 0;
   }
 
   .focus-card {
-    padding: 1.2rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .focus-copy {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
+    line-height: 1.15;
+    text-align: justify;
+    text-align-last: auto;
+    overflow-wrap: anywhere;
   }
+}
 
   .campaign-grid {
     gap: 2.8rem;
